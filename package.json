@@ -1,0 +1,20 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress automatiion framework",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTest-headless": "npx cypress run",
+    "triggerAllTest-autostore": "npx cypress run --spec 'cypress/integration/automation-test-store/*'",
+    "triggerAllTest-headed": "npx cypress run --headed",
+    "cypress-multiple-browser": "npm run triggerAllTest-autostore -- --browser electron --headed & npm run triggerAllTest-autostore -- --browser chrome --headed"
+  },
+  "author": "Yvan Niyo",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.6.0"
+  },
+  "dependencies": {
+    "cypress-iframe": "^1.0.1"
+  }
+}

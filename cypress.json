@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://www.webdriveruniversity.com",
+  "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 0,
+    "openMode": 0
+  },
+  "env": {
+    "last_name": "Tim",
+    "webdriveruni_homepage": "http://www.webdriveruniversity.com"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+screenshots
+videos
+downloads
+tests
+package-lock.json
+.pytest_cache
