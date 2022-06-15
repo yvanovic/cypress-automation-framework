@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Alias and invoke", () => {
+  // Run only if it's different of Chrome browser
   it("Validate a specific hair care product", { browser: "!chrome" }, () => {
     cy.visit("https://automationteststore.com/");
     cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
@@ -12,7 +13,7 @@ describe("Alias and invoke", () => {
     cy.get("@ProductThumbnail").its("length").should("be.gt", 5);
     cy.get("@ProductThumbnail").should("include", "Seaweed Conditioner");
   });
-
+  // Run only if it's firefox
   it("Number of thumbnail", { browser: "firefox" }, () => {
     cy.visit("https://automationteststore.com/");
     cy.get(".thumbnail").as("productThumbnail");
@@ -23,7 +24,8 @@ describe("Alias and invoke", () => {
       .should("include", "Add to Cart");
   });
 
-  it("Number of thumbnail", { browser: "!firefox" }, () => {
+  // Run only if it's different of Chrome browser
+  it("Get price of items", { browser: "!firefox" }, () => {
     cy.visit("https://automationteststore.com/");
     cy.get(".thumbnail").as("productThumbnail");
     // cy.get("@productThumbnail")

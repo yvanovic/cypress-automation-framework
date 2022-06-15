@@ -4,7 +4,7 @@ describe("Network request with intercept ", () => {
     cy.visit("https://example.cypress.io/commands/network-requests");
   });
 
-  it.only("Get request and stub response", () => {
+  it("Get request and stub response", () => {
     cy.intercept(
       {
         method: "GET",
@@ -14,8 +14,8 @@ describe("Network request with intercept ", () => {
     ).as("getComment");
     cy.get(".network-btn").click();
     cy.wait("@getComment").its("response.statusCode").should("be.eq", 200);
-    cy.get(".network-comment").should("have.text", "Hello Johny");
-    cy.get(".network-comment").contains("Hello Johny");
+    cy.get(".network-comment").should("have.text", "Hello John");
+    cy.get(".network-comment").contains("Hello John");
   });
 
   it("POST request and stub response", () => {
