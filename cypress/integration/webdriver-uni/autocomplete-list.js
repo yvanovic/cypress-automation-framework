@@ -11,7 +11,7 @@ describe("Test Autocomplete list", () => {
       .invoke("removeAttr", "target")
       .click({ force: true });
     cy.get("#myInput").type("G");
-    cy.get("#myInputautocomplete-list > *").each(($el) => {
+    cy.get("#myInputautocomplete-list > *").each(($el, idx, $list) => {
       const productName = $el.text();
       const prod = "Garlic";
       if (prod === productName) {
