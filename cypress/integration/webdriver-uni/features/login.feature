@@ -15,3 +15,17 @@ Scenario Outline: Scenario Outline name: Login using valid credentials
         | webdriver  | webdriver12   | failed    |
         | job        | pass12        | failed    |
 
+
+@regression
+Scenario Outline: Scenario Outline name: Login using valid credentials
+    Given I access the webdriverUniversity Login Portal Page
+    When user enters a username
+        | username |
+        | webdriver |
+    And I enter a password <password>
+    And I click on the login button
+    Then I should be presented with following message validation <message>
+
+    Examples:
+        | password      | message   |
+        | webdriver123  | succeeded |

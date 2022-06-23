@@ -40,3 +40,7 @@ Then(
     expect(stub.getCall(0)).to.be.calledWith(expect_message);
   }
 );
+
+When("user enters a username", function (DataTable) {
+  cy.get("#text").type(DataTable.rawTable[1][0]);
+});

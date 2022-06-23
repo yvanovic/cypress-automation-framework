@@ -8,5 +8,6 @@
   "env": {
     "last_name": "Tim",
     "webdriveruni_homepage": "http://www.webdriveruniversity.com"
-  }
+  },
+  "video": false
 }
