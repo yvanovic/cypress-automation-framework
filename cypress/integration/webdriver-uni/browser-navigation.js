@@ -10,7 +10,7 @@ describe("Navigation back and forward", () => {
     cy.go("back");
     cy.get("#udemy-promo-thumbnail")
       .find("h1")
-      .should("contain", "My Courses & Promo Codes:");
+      .should("contain", "My Courses & Promo Codes");
     cy.wait(2000);
     cy.reload();
     cy.go("forward");
